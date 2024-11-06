@@ -1,0 +1,52 @@
+
+{
+    // "layer": "top", // Waybar at top layer
+     "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 5, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network","battery","memory"],
+    // Modules configuration
+    // "hyprland/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}",
+    //     "format-icons": {
+    //         "1",
+    //         "2",
+    //         "3",
+    //         "4",
+    //         "5"
+    //     }
+    // },
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+        "format": "{:%I:%M }",
+        "format-alt": "{:%Y-%m-%d}"
+      
+    },
+    "cpu": {
+        "format": "CPU: {usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "Memory: {}% "
+    },
+    "battery": {
+        "format": "Bat: {capacity}% ",
+        "format-charging": "Bat: {capacity}%",
+    },
+    "network": {
+        // "interface": "wlp1s0*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+}
+
